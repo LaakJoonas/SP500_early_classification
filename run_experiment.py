@@ -472,7 +472,7 @@ def run_experiment_programmatic(experiment_name, model_type="standard", delay_pe
         print(f"{'='*40}")
         print(f"Accuracy: {accuracy:.4f}")
         print(f"Earliness: {earliness:.4f}")
-        print("Earliness in min: {(earliness*390):.4f}")
+        print(f"Earliness in min: {(earliness*390):.4f}")
         print(f"F1-Score: {f1:.4f}")
         print(f"Harmonic Mean: {harmonic_mean:.4f}")
         print(f"Cost: {cost:.4f}")
@@ -481,11 +481,11 @@ def run_experiment_programmatic(experiment_name, model_type="standard", delay_pe
         print(f"DOWN - Accuracy: {per_class_metrics['down_accuracy']:.4f} ({per_class_metrics['down_correct']}/{per_class_metrics['down_total']}) | Earliness: {per_class_metrics['down_earliness']:.4f}")
         
         # Create visualizations
-        if HAS_PLOTTING:
-            print("Generating visualizations...")
-            plot_confusion_matrix(y_test, y_pred, results_dir, experiment_name)
-            plot_earliness_distribution(stop_timestamps, results_dir)
-            plot_earliness_vs_accuracy(stop_timestamps, y_test, y_pred, results_dir)
+        
+        print("Generating visualizations...")
+        plot_confusion_matrix(y_test, y_pred, results_dir, experiment_name)
+        plot_earliness_distribution(stop_timestamps, results_dir)
+        plot_earliness_vs_accuracy(stop_timestamps, y_test, y_pred, results_dir)
         
         # Save text results
         save_results_text(results_dict, results_dir)
