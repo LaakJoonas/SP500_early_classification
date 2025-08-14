@@ -1,3 +1,4 @@
+## Introduction
 This repository contains the files for thesis experiments on Early Time Series Classification (ETSC). The case study is performed on the S&P500 index using the VIX, MACRO indicators and 4 technical indicators in a variety of configurations. This classification problem is a binary UP/DOWN (1.0/2.0) task and is performed using the CALIMERA ETSC method. The experiment uses the MiniROCKET feature extractor and the Ridge classifier respectively, as used by Bilski et al. in their paper "CALIMERA: A new early time series classification method" (2023, Information Processing and Management, vol. 60, issue 5, DOI: 10.1016/j.ipm.2023.103465, Link: https://doi.org/10.1016/j.ipm.2023.103465).
 (Not a real citation just helpful information for everyone interested) 
 
