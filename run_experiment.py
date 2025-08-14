@@ -366,13 +366,13 @@ def run_experiment():
         print("Saving results...")
         save_results_text(results_dict, results_dir)
         
-        print(f"\n✅ Experiment completed successfully!")
-        print(f"📁 Results saved to: {results_dir}")
-        print(f"📊 Generated plots: confusion_matrix.png, earliness_distribution.png, earliness_vs_accuracy.png")
-        print(f"📄 Text results: results.txt")
+        print(f"\nExperiment completed successfully!")
+        print(f"Results saved to: {results_dir}")
+        print(f"Generated plots: confusion_matrix.png, earliness_distribution.png, earliness_vs_accuracy.png")
+        print(f"Text results: results.txt")
         
     except Exception as e:
-        print(f"\n❌ Error during experiment: {e}")
+        print(f"\nError during experiment: {e}")
         print("Please check that all required files exist and try again.")
 
 
@@ -490,11 +490,11 @@ def run_experiment_programmatic(experiment_name, model_type="standard", delay_pe
         # Save text results
         save_results_text(results_dict, results_dir)
         
-        print(f"\n✅ Experiment completed! Results saved to: {results_dir}")
+        print(f"\nExperiment completed! Results saved to: {results_dir}")
         return results_dict, results_dir
         
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\nError: {e}")
         raise
 
 

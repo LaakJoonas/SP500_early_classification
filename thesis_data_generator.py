@@ -589,10 +589,10 @@ def generate_experiment_datasets(
         write_ts_file(train_file, X_train, y_train, exp['features'], exp['name'])
         write_ts_file(test_file, X_test, y_test, exp['features'], exp['name'])
         
-        print(f"  ✅ Created: {train_file}")
-        print(f"  ✅ Created: {test_file}")
+        print(f"  Created: {train_file}")
+        print(f"  Created: {test_file}")
     
-    print(f"\n🎉 ALL EXPERIMENTS COMPLETED!")
+    print(f"\nALL EXPERIMENTS COMPLETED!")
     print(f"Generated {len(experiments) * 2} .ts files in {output_dir}")
     
     return experiments
@@ -609,11 +609,11 @@ if __name__ == "__main__":
     macro_file = "original_datasets/macro_monthly.csv" if USE_MACRO else None
     indicators_file = "original_datasets/financial_indicators_full.csv" if USE_INDICATORS else None
     
-    print("🎯 THESIS EXPERIMENTS: S&P500 EARLY CLASSIFICATION")
-    print(f"   S&P500 data: ✅")
-    print(f"   VIX data: {'✅' if USE_VIX else '❌'}")
-    print(f"   Macro indicators: {'✅' if USE_MACRO else '❌'}")
-    print(f"   Technical indicators: {'✅' if USE_INDICATORS else '❌'}")
+    print("THESIS EXPERIMENTS: S&P500 EARLY CLASSIFICATION")
+    print(f"   S&P500 data: YES")
+    print(f"   VIX data: {'YES' if USE_VIX else 'NO'}")
+    print(f"   Macro indicators: {'YES' if USE_MACRO else 'NO'}")
+    print(f"   Technical indicators: {'YES' if USE_INDICATORS else 'NO'}")
     print()
     
     experiments = generate_experiment_datasets(

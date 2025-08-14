@@ -65,10 +65,10 @@ def run_all_experiments():
                     }
                     results_summary.append(summary)
                     
-                    print(f"✅ Completed in {end_time - start_time:.1f}s")
+                    print(f"Completed in {end_time - start_time:.1f}s")
                     
                 except Exception as e:
-                    print(f"❌ Failed: {e}")
+                    print(f"Failed: {e}")
                     traceback.print_exc()
                     continue
     
@@ -90,7 +90,7 @@ def run_all_experiments():
         
         # Best result
         best = results_summary[0]
-        print(f"\n🏆 Best Performance (Harmonic Mean): {best['experiment']} with {best['model']} CALIMERA (λ={best['delay_penalty']})")
+        print(f"\nBest Performance (Harmonic Mean): {best['experiment']} with {best['model']} CALIMERA (λ={best['delay_penalty']})")
         print(f"   Harmonic Mean: {best['harmonic_mean']:.4f} | Accuracy: {best['accuracy']:.4f} | Earliness: {best['earliness']:.4f}")
         
         # Save summary to file
@@ -105,9 +105,9 @@ def run_all_experiments():
                 f.write(f"{i:<4} {result['experiment']:<20} {result['model']:<10} {result['delay_penalty']:<5.1f} "
                        f"{result['accuracy']:<6.3f} {result['earliness']:<6.3f} {result['harmonic_mean']:<6.3f} {result['cost']:<6.3f}\n")
         
-        print(f"\n📄 Summary saved to: batch_experiment_summary.txt")
+        print(f"\nSummary saved to: batch_experiment_summary.txt")
     
-    print(f"\n🎉 Batch experiment completed! Processed {len(results_summary)}/{total_runs} runs successfully.")
+    print(f"\nBatch experiment completed! Processed {len(results_summary)}/{total_runs} runs successfully.")
 
 if __name__ == "__main__":
     run_all_experiments()
