@@ -147,10 +147,10 @@ if __name__ == "__main__":
         indicators_df = calculate_all_indicators(sp500_df, save_file=True)
         
         print("\n" + "="*60)
-        print("✅ FINANCIAL INDICATORS CALCULATION COMPLETED!")
-        print(f"📁 Created files:")
+        print("FINANCIAL INDICATORS CALCULATION COMPLETED!")
+        print(f"Created files:")
         print(f"   - financial_indicators_full.csv (minute-level data)")
         print(f"   - financial_indicators_daily.csv (daily summaries)")
-        print("🎯 Ready for integration with VIX/macro data")
+        print("Ready for integration with VIX/macro data")
     else:
-        print("❌ Failed to load SP500 data")
+        print("Failed to load SP500 data")
